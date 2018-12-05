@@ -1,0 +1,45 @@
+# /---------------------------------------------------------------------------
+# lastafluteMap: (NotRequired - Default map:{})
+#
+# Specification:
+# map:{
+#     ; serviceName = [your service name]
+#     ; domainPackage = [package]
+#     ; commonMap = map:{
+#         ; path = [relative path to common project from DBFlute client]
+#         ; freeGenList = list:{ [env or config or label or message or html] }
+#         ; propertiesHtmlList = list:{ [env or config or label or message] }
+#     }
+#     ; appMap = map:{
+#         ; [application name, camel case, initial uncapitalised] = map:{
+#             ; path = [relative path to application project from DBFlute client]
+#             ; freeGenList = list:{ [env or config or label or message or html] }
+#             ; propertiesHtmlList = list:{ [env or config or label or message] }
+#         }
+#     }
+# }
+#
+# *The line that starts with '#' means comment-out.
+#
+map:{
+    # your service name, camel case, initial uncapitalised
+    ; serviceName = herokutest
+
+    # package for your domain name, e.g. com.example
+    ; domainPackage = org.herokutest
+
+    # settings for web applications
+    ; appMap = map:{
+        ; herokutest = map:{
+            ; path = ..
+            ; freeGenList = list:{ env ; config ; label ; message ; mail ; template ; html ; doc ; appcls ; namedcls }
+            ; propertiesHtmlList = list:{ env ; config ; label ; message }
+        }
+    }
+
+    # you can override (several) default settings like this:
+    #; overrideMap = map:{
+    #    ; herokutest.freeGen.mail.targetDir = ./playsql/data/mail
+    #}
+}
+# ----------------/

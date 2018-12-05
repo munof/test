@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE components PUBLIC "-//DBFLUTE//DTD LastaDi 1.0//EN"
+	"http://dbflute.org/meta/lastadi10.dtd">
+<components namespace="dbflute">
+	<include condition="#exists('#path')" path="my_included_dbflute.xml"/>
+	<include path="rdb.xml"/>
+
+	<!-- The components of DBFlute Runtime. -->
+	<component name="introduction" class="org.herokutest.dbflute.allcommon.DBFluteInitializer"/>
+	<component name="invokerAssistant" class="org.herokutest.dbflute.allcommon.ImplementedInvokerAssistant"/>
+	<component name="behaviorCommandInvoker" class="org.dbflute.bhv.core.BehaviorCommandInvoker"/>
+	<component name="behaviorSelector" class="org.herokutest.dbflute.allcommon.ImplementedBehaviorSelector"/>
+	<component name="commonColumnAutoSetupper" class="org.herokutest.dbflute.allcommon.ImplementedCommonColumnAutoSetupper"/>
+
+	<!-- The components of Behavior. -->
+	<component name="memberBhv" class="org.herokutest.dbflute.exbhv.MemberBhv"/>
+	<component name="memberAddressBhv" class="org.herokutest.dbflute.exbhv.MemberAddressBhv"/>
+	<component name="memberFollowingBhv" class="org.herokutest.dbflute.exbhv.MemberFollowingBhv"/>
+	<component name="memberLoginBhv" class="org.herokutest.dbflute.exbhv.MemberLoginBhv"/>
+	<component name="memberSecurityBhv" class="org.herokutest.dbflute.exbhv.MemberSecurityBhv"/>
+	<component name="memberServiceBhv" class="org.herokutest.dbflute.exbhv.MemberServiceBhv"/>
+	<component name="memberStatusBhv" class="org.herokutest.dbflute.exbhv.MemberStatusBhv"/>
+	<component name="memberWithdrawalBhv" class="org.herokutest.dbflute.exbhv.MemberWithdrawalBhv"/>
+	<component name="productBhv" class="org.herokutest.dbflute.exbhv.ProductBhv"/>
+	<component name="productCategoryBhv" class="org.herokutest.dbflute.exbhv.ProductCategoryBhv"/>
+	<component name="productStatusBhv" class="org.herokutest.dbflute.exbhv.ProductStatusBhv"/>
+	<component name="purchaseBhv" class="org.herokutest.dbflute.exbhv.PurchaseBhv"/>
+	<component name="purchasePaymentBhv" class="org.herokutest.dbflute.exbhv.PurchasePaymentBhv"/>
+	<component name="regionBhv" class="org.herokutest.dbflute.exbhv.RegionBhv"/>
+	<component name="serviceRankBhv" class="org.herokutest.dbflute.exbhv.ServiceRankBhv"/>
+	<component name="withdrawalReasonBhv" class="org.herokutest.dbflute.exbhv.WithdrawalReasonBhv"/>
+</components>
